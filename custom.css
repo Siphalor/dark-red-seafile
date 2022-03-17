@@ -34,6 +34,11 @@ input, .input, .form-control {
   line-height: initial;
   padding: 0.2rem 0.4rem 0;
 }
+input[readonly], input[disabled], .input[readonly], .input[disabled],
+.form-control[readonly], .form-control[disabled]{
+  background-color: var(--bg);
+  border: 1px solid var(--border-color);
+}
 
 button, .btn-secondary, input, .form-control,
 .group-operations .group-op-item,
@@ -56,7 +61,7 @@ button:hover, .btn-secondary:hover,
   cursor: pointer;
 }
 
-.btn-primary, input[type="submit"], input.submit,
+.btn-primary, .btn-outline-primary, input[type="submit"], input.submit,
 .detail-btn button, .btn-active[data-active="true"], .rich-icon-btn[data-active="true"] {
   background-color: var(--primary);
   border-color: var(--primary);
@@ -66,7 +71,7 @@ button:hover, .btn-secondary:hover,
 .detail-btn button.btn {
   background-color: var(--primary-mix-gray);
 }
-.btn-primary:hover, input[type="submit"]:hover, input.submit:hover,
+.btn-primary:hover, .btn-outline-primary:hover, input[type="submit"]:hover, input.submit:hover,
 .detail-btn button:hover, .btn-active[data-active="true"]:hover,  .rich-icon-btn[data-active="true"]:hover {
   background-color: var(--primary-hover);
   border-color: var(--primary-hover);
@@ -93,6 +98,10 @@ a, a:focus, a:hover {
   color: var(--primary) !important;
 }
 
+.input-tip {
+  color: var(--text-color-secondary);
+}
+
 .sf-heading {
   color: var(--text-color);
   font-variant: all-small-caps;
@@ -111,7 +120,7 @@ table th {
   background-color: #444 !important;
 }
 
-.side-panel > *, .main-panel > .reach-router > * {
+.side-panel, .side-panel > *, .main-panel > .reach-router > * {
   border-color: var(--border-color);
 }
 
@@ -148,7 +157,7 @@ table th {
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
-#header, .main-panel-north, .side-panel-north, .file-view-header, .heading,
+#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header,
 .sf-md-viewer-topbar > * {
   background-color: black;
   border-color: var(--border-color);
@@ -188,12 +197,17 @@ table th {
   background-color: var(--primary);
 }
 
-.nav-pills .nav-item .nav-link {
+.nav-pills .nav-item .nav-link, .nav .nav-item .nav-link {
   color: var(--text-color);
+}
+
+.nav .nav-item .nav-link:hover {
+  color: var(--primary-mix-gray);
 }
 
 .nav-pills .nav-item .nav-link:hover {
   background-color: var(--primary-mix-gray);
+  color: white;
 }
 
 .nav.nav-pills .nav-item .nav-link.active {
@@ -347,7 +361,8 @@ div[data-evergreen-toaster-container] span > * > * > * {
   background-color: black;
   border-color: var(--border-color) !important;;
 }
-.seafile-editor-module .side-panel .nav .nav-link.active, .nav .nav-item .nav-link.active {
+.seafile-editor-module .side-panel .nav .nav-link.active,
+.nav .nav-item .nav-link.active, .nav .nav-item.active .nav-link {
   color: var(--primary);
   border-color: var(--primary);
 }
@@ -450,6 +465,24 @@ div[data-evergreen-toaster-container] span > * > * > * {
 
 .info-item-heading {
   border-color: var(--border-color) !important;;
+}
+
+.setting-item-heading {
+  border-color: var(--border-color);
+}
+
+.detail-container {
+  border-color: var(--border-color);
+}
+.detail-header {
+  background-color: black;
+  border-color: var(--border-color);
+}
+.detail-header .detail-title .name {
+  color: white
+}
+.detail-body {
+  background-color: var(--bg);
 }
 
 .custom-switch-input:checked ~ .custom-switch-indicator {
