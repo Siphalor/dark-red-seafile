@@ -1,0 +1,457 @@
+:root {
+  --primary: #ee435b;
+  --primary-mix-gray: #91424d;
+  --primary-hover: #ed8c9a;
+  --bg: #222;
+  --bg-active: #444;
+  --text-color: #eee;
+  --text-color-secondary: #aaa;
+  --border-color: #555;
+  --border-radius: 6px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-color);
+}
+
+button:not(.web-setting-icon-btn):not(.btn-icon):not(.action-icon):not(.fas),
+.btn:not(.web-setting-icon-btn):not(.btn-icon):not(.action-icon):not(.fas),
+input, optgroup {
+  font-family: revert-layer;
+}
+
+button, .btn, input, .input, .form-control, .detail-btn button,
+.group-operations .group-op-item {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem !important;
+  line-height: initial;
+  border-radius: var(--border-radius);
+  border: none;
+}
+
+input, .input, .form-control {
+  line-height: initial;
+  padding: 0.2rem 0.4rem 0;
+}
+
+button, .btn-secondary, input, .form-control,
+.group-operations .group-op-item,
+.button-container .rich-icon-btn, .button-container .btn {
+  background-color: black;
+  color: white;
+}
+.form-control.search-input {
+  padding-left: 2.2rem !important;;
+}
+button:focus, .btn:focus, input:focus, .form-control:focus {
+  background-color: black;
+  color: white;
+}
+button:hover, .btn-secondary:hover,
+.button-container .rich-icon-btn:hover, .button-container .btn:hover,
+.seafile-ed-image .image-full-button {
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary, input[type="submit"], input.submit,
+.detail-btn button, .btn-active[data-active="true"], .rich-icon-btn[data-active="true"] {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  background-image: none;
+}
+.detail-btn button.btn {
+  background-color: var(--primary-mix-gray);
+}
+.btn-primary:hover, input[type="submit"]:hover, input.submit:hover,
+.detail-btn button:hover, .btn-active[data-active="true"]:hover,  .rich-icon-btn[data-active="true"]:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  background-image: none;
+}
+
+.btn.btn-primary:disabled, .btn.btn-secondary:disabled {
+  background-color: var(--text-color-secondary)
+}
+
+.rich-icon-btn {
+  width: unset;
+  line-height: unset;
+}
+
+.sf-view-mode-btn.current-mode {
+  background-color: var(--primary-mix-gray) !important;
+}
+
+a, a:focus, a:hover {
+  color: var(--primary);
+}
+.path-link {
+  color: var(--primary) !important;
+}
+
+.sf-heading {
+  color: var(--text-color);
+  font-variant: all-small-caps;
+  font-weight: bold;
+}
+
+table td {
+  border-bottom-color: var(--border-color);
+  color: var(--text-color-secondary);
+}
+table th {
+  border-bottom-color: var(--border-color);
+}
+
+.tr-active, .tr-highlight {
+  background-color: #444 !important;
+}
+
+.side-panel > *, .main-panel > .reach-router > * {
+  border-color: var(--border-color);
+}
+
+.login-panel {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: none;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+}
+.login-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/media/custom/login-bg.jpg') no-repeat fixed 50% 50% / cover;
+  filter: blur(20px) brightness(70%);
+  z-index: -1;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  box-sizing: content-box;
+}
+.login-panel .input {
+  border-color: var(--border-color);
+  border-width: 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.login-panel br ~ .input {
+  border-top-width: 1px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+#header, .main-panel-north, .side-panel-north, .file-view-header, .heading,
+.sf-md-viewer-topbar > * {
+  background-color: black;
+  border-color: var(--border-color);
+}
+.heading {
+  background-color: black !important;
+  color: white !important;
+}
+.seafile-rich-editor-topbar, .seafile-rich-editor-topbar > *, .seafile-editor-main-panel {
+  background-color: var(--bg);
+  border-color: var(--border-color);
+}
+.header-list-container, .seafile-rich-editor-topbar .btn-group {
+  border-color: var(--border-color);
+}
+
+.file-view-content {
+  background-color: var(--bg);
+}
+
+.side-nav-footer {
+  background-color: var(--bg);
+}
+.side-nav-footer .item {
+  color: var(--text-color-secondary) !important;
+}
+
+.side-panel > div, .side-panel > div > div {
+  border-color: var(--border-color);
+}
+
+.dir-content-nav {
+  background-color: var(--bg);
+}
+
+.tree-node-inner-hover {
+  background-color: var(--primary);
+}
+
+.nav-pills .nav-item .nav-link {
+  color: var(--text-color);
+}
+
+.nav-pills .nav-item .nav-link:hover {
+  background-color: var(--primary-mix-gray);
+}
+
+.nav.nav-pills .nav-item .nav-link.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.new-narrow-panel {
+  box-shadow: none;
+  border-color: var(--border-color);
+}
+.new-narrow-panel .hd {
+  background-color: var(--primary);
+  border-bottom: none;
+}
+
+.cur-view-path {
+  background-color: var(--bg);
+  border-color: var(--border-color);
+}
+.cur-view-path::after {
+  border-color: var(--border-color);
+}
+
+.web-setting-label {
+  text-transform: capitalize;
+}
+
+.op-icon {
+  color: var(--primary);
+}
+
+.op-icon:hover, .op-icon:focus {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.path-toolbar .toolbar-item a:hover {
+  color: var(--primary);
+}
+
+.action-icon {
+  color: inherit !important;
+}
+.action-icon:hover {
+  color: inherit !important;
+}
+
+.dirents-more-menu:hover {
+  border: none;
+}
+
+.dropdown-menu {
+  background-color: black;
+  border-radius: var(--border-radius);
+}
+
+.dropdown-item {
+  color: var(--text-color);
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: var(--primary);
+}
+
+.dropdown-divider {
+  border-color: var(--border-color);
+}
+
+.sf-popover {
+  background: none;
+  background-color: black;
+  box-shadow: none;
+  border: none;
+}
+
+.account-popup .item {
+  border-color: var(--border-color);
+}
+.account-popup a.item {
+  color: var(--text-color);
+  border: none;
+}
+.account-popup a.item:hover {
+  background-color: var(--primary);
+}
+
+#quota-bar {
+  border-color: var(--border-color);
+}
+#quota-usage {
+  background-color: var(--primary);
+}
+
+.outer-caret, .inner-caret {
+  border-color: black transparent;
+}
+.inner-caret {
+  border-top-color: black;
+}
+.outer-caret {
+  border-bottom-color: black;
+}
+.up-outer-caret .inner-caret {
+  border-bottom-color: black;
+}
+
+#notifications .title {
+  color: var(--text-color);
+}
+
+.modal-content {
+  background-color: var(--bg);
+}
+.modal-header, .modal-footer {
+  border-color: var(--border-color)
+}
+
+.close {
+  color: white;
+  text-shadow: none;
+}
+
+.empty-tip {
+  background-color: black;
+  border: none;
+  border-radius: var(--border-radius);
+}
+.empty-tip h2 {
+  color: white;
+}
+.file-view-tip {
+  box-shadow: none;
+  background-color: var(--bg);
+  border-color: var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+div[data-evergreen-toaster-container] span > * > * > * {
+  background-color: black !important;
+  color: white !important;
+  box-shadow: none;
+}
+
+.seafile-editor-side-panel {
+  border-color: var(--border-color);
+}
+.seafile-editor-side-panel .side-panel {
+  background-color: var(--bg);
+}
+.seafile-editor-side-panel .nav, .seafile-comment-toggle-resolved, .seafile-comment-footer {
+  background-color: black;
+  border-color: var(--border-color) !important;;
+}
+.seafile-editor-module .side-panel .nav .nav-link.active, .nav .nav-item .nav-link.active {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.seafile-editor-module .side-panel .side-panel-content {
+  padding: 0;
+}
+#add-participant-icon i {
+  border: none;
+  color: white;
+}
+.participants .avatar {
+  border:none;
+}
+.dirent-table-container th {
+  color: var(--text-color);
+}
+.dirent-table-container td {
+  color: var(--text-color-secondary);
+}
+.seafile-comment {
+  margin: 0;
+}
+.seafile-comment-toggle-resolved {
+  margin-top: 0;
+  position: unset;
+}
+.seafile-comment-list {
+  background-color: var(--bg);
+  margin-top: 0;
+  margin-bottom: 0 !important;
+  overflow: scroll;
+}
+.seafile-comment-footer {
+  position: unset;
+  max-height: unset;
+  min-height: unset;
+}
+.seafile-comment-footer textarea {
+  background-color: var(--bg) !important;
+  border-color: var(--border-color) !important;
+  border-radius: var(--border-radius) !important;
+  color: white !important;
+}
+.seafile-comment-footer > div > div {
+  background-color: transparent !important;
+}
+.seafile-comment-dropdown-btn:hover {
+  background-color: transparent !important;
+  color: white !important;
+}
+.seafile-comment-dropdown button:not(.seafile-comment-dropdown-btn) {
+  background-color: black !important;
+  color: var(--text-color);
+}
+.seafile-comment-dropdown button:not(.seafile-comment-dropdown-btn):hover {
+  color: var(--primary);
+}
+.rich-menu {
+  height: unset;
+}
+.upload-localimg .btn {
+  height: 100%;
+  width: unset;
+  min-width: unset;
+  line-height: unset;
+}
+.header-list-container .list-dropdown {
+  background-color: black;
+  border: none;
+  box-shadow: none;
+}
+.header-list-container .header-list-body-highlight, .header-list-container .header-list-body-hover {
+  background-color: var(--bg) !important;
+}
+.header-list-container .header-list .list-dropdown-item:hover {
+  background-color: transparent;
+  color: var(--primary);
+}
+.editor {
+  background-color: var(--bg);
+  box-shadow: 0 0 10px #888;
+  border: none;
+  color: var(--text-color);
+}
+.editor h1, .editor h2, .editor h3, .editor h4, .editor h5, .editor h6 {
+  color: white;
+}
+.image-tooltip {
+  background-color: black;
+}
+.image-tooltip::before {
+  border-color: black transparent transparent black;
+}
+.seafile-ed-image .seafile-ed-image-inResizing {
+	box-shadow: 0 0 0 2px var(--primary);
+}
+.seafile-ed-image .image-resizer {
+  background-color: var(--primary);
+}
+
+.info-item-heading {
+  border-color: var(--border-color) !important;;
+}
+
+.custom-switch-input:checked ~ .custom-switch-indicator {
+  background-color: var(--primary);
+}
