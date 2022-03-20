@@ -63,7 +63,7 @@ input, .input, .form-control {
 	padding-left: 2.2rem !important;
 }
 
-.btn-primary, .btn-outline-primary, input[type="submit"], input.submit,
+.btn-primary, .btn-outline-primary, input.submit, button.submit,
 .detail-btn button, .btn-active[data-active="true"], .rich-icon-btn[data-active="true"] {
 	background-color: var(--primary);
 	border-color: var(--primary);
@@ -74,6 +74,15 @@ input, .input, .form-control {
 		background-color: var(--primary-hover);
 		border-color: var(--primary-hover);
 		background-image: none;
+	}
+	&:active:active:active {
+		background-color: white;
+		border-color: var(--primary);
+		color: black;
+	}
+	&:focus:focus {
+		border-color: var(--primary);
+		box-shadow: none;
 	}
 }
 
@@ -92,8 +101,10 @@ input, .input, .form-control {
 	background-color: var(--primary-mix-gray) !important;
 }
 
-a, a:focus, a:hover {
-	color: var(--primary);
+a, .sf-link-btn {
+	&, &:hover, &:focus {
+		color: var(--primary);
+	}
 }
 .path-link {
 	color: var(--primary) !important;
@@ -107,6 +118,10 @@ a, a:focus, a:hover {
 	color: var(--text-color);
 	font-variant: all-small-caps;
 	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: white;
 }
 
 table {
@@ -154,6 +169,11 @@ table {
 		border-color: var(--border-color);
 		border-width: 0;
 		border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+		&:last-of-type {
+			border-bottom-left-radius: var(--border-radius);
+			border-bottom-right-radius: var(--border-radius);
+		}
 	}
 	br ~ .input {
 		border-top-width: 1px;
@@ -385,67 +405,71 @@ div[data-evergreen-toaster-container] span > * > * > * {
 			padding: 0;
 		}
 	}
-	.nav, .seafile-comment-toggle-resolved, .seafile-comment-footer {
+	.nav {
 		background-color: black;
 		border-color: var(--border-color) !important;
 	}
-	.seafile-comment {
-		border-left: none;
-		margin: 0;
+}
+.seafile-comment {
+	border-left: none;
+	margin: 0;
 
-		.seafile-comment-toggle-resolved {
-			margin-top: 0;
-			position: unset;
+	.seafile-comment-toggle-resolved, .seafile-comment-footer {
+		background-color: black;
+		border-color: var(--border-color) !important;
+	}
+	.seafile-comment-toggle-resolved {
+		margin-top: 0;
+		position: unset;
+	}
+	.seafile-comment-list {
+		background-color: var(--bg);
+		margin-top: 0;
+		margin-bottom: 0 !important;
+		overflow: scroll;
+
+		.seafile-comment-item-resolved {
+			background-color: #343;
 		}
-		.seafile-comment-list {
-			background-color: var(--bg);
-			margin-top: 0;
-			margin-bottom: 0 !important;
-			overflow: scroll;
-
-			.seafile-comment-item-resolved {
-				background-color: #343;
-			}
-			.seafile-comment-dropdown {
-				.seafile-comment-dropdown-btn {
-					&:hover {
-						background-color: transparent !important;
-						color: white !important;
-					}
-				}
-				button:not(.seafile-comment-dropdown-btn) {
-					background-color: black !important;
-					color: var(--text-color);
-
-					&:hover {
-						color: var(--primary);
-					}
+		.seafile-comment-dropdown {
+			.seafile-comment-dropdown-btn {
+				&:hover {
+					background-color: transparent !important;
+					color: white !important;
 				}
 			}
-		}
-		.seafile-comment-footer {
-			position: unset;
-			max-height: unset;
-			min-height: unset;
+			button:not(.seafile-comment-dropdown-btn) {
+				background-color: black !important;
+				color: var(--text-color);
 
-			textarea {
-				background-color: var(--bg) !important;
-				border-color: var(--border-color) !important;
-				border-radius: var(--border-radius) !important;
-				color: white !important;
-			}
-			& > div > div {
-				background-color: transparent !important;
+				&:hover {
+					color: var(--primary);
+				}
 			}
 		}
 	}
+	.seafile-comment-footer {
+		position: unset;
+		max-height: unset;
+		min-height: unset;
+
+		textarea {
+			background-color: var(--bg) !important;
+			border-color: var(--border-color) !important;
+			border-radius: var(--border-radius) !important;
+			color: white !important;
+		}
+		& > div > div {
+			background-color: transparent !important;
+		}
+	}
 }
-#add-participant-icon i {
+#add-participant-icon i, .participants .add-participants i {
 	border: none;
 	color: white;
 }
 .participants .avatar {
-	border:none;
+	border: none;
 }
 .dirent-table-container {
 	th {
@@ -512,21 +536,50 @@ div[data-evergreen-toaster-container] span > * > * > * {
 	border-color: var(--border-color);
 }
 
+.cur-view-detail {
+	background-color: var(--bg);
+}
 .detail-container {
 	border-color: var(--border-color);
-}
-.detail-header {
-	background-color: black;
-	border-color: var(--border-color);
 
-	.detail-title .name {
-		color: white
+	.detail-header {
+		background-color: black;
+		border-color: var(--border-color);
+
+		.detail-title .name {
+			color: white
+		}
 	}
-}
-.detail-body {
-	background-color: var(--bg);
+	.nav {
+		background-color: black;
+		border-color: var(--border-color);
+	}
+	.detail-body {
+		background-color: var(--bg);
+	}
 }
 
 .custom-switch-input:checked ~ .custom-switch-indicator {
 	background-color: var(--primary);
+}
+
+.grid-item {
+	.grid-file-name-link {
+		color: var(--text-color-secondary);
+
+		&:hover {
+			color: var(--primary);
+		}
+	}
+
+	&:hover {
+		.grid-file-img-link {
+			background-color: black;
+			border-radius: var(--border-radius);
+		}
+
+		.grid-file-name-link {
+			color: var(--primary);
+		}
+	}
 }
