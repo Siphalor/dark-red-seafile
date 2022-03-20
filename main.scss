@@ -52,6 +52,20 @@ input, .input, .form-control {
 	}
 }
 
+.language-selector > div {
+	background-color: black;
+	color: white;
+	border-color: black;
+
+	&:focus {
+		border-color: var(--primary);
+	}
+
+	& > div:first-of-type > div:first-of-type {
+		color: white;
+	}
+}
+
 #{$btn-classes}, .btn-secondary {
 	&:hover {
 		background-color: #222;
