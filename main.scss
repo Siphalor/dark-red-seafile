@@ -228,8 +228,8 @@ table {
 		}
 	}
 
-	.nav-item .nav-link {
-		&:hover, &.active {
+	.nav-item {
+		&.active .nav-link, .nav-link:hover, .nav-link.active {
 			color: var(--primary);
 			border-color: var(--primary);
 		}
