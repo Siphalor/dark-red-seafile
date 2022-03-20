@@ -102,7 +102,8 @@ input, .input, .form-control {
 
 #{$btn-classes}, .btn.btn-primary, .btn.btn-secondary {
 	&:disabled {
-		background-color: var(--text-color-secondary)
+		background-color: var(--text-color-secondary);
+		border-color: var(--text-color-secondary);
 	}
 }
 
