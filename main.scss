@@ -196,7 +196,7 @@ table {
 	}
 }
 
-#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header,
+#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header,
 .sf-md-viewer-topbar > * {
 	background-color: black;
 	border-color: var(--border-color);
@@ -213,8 +213,9 @@ table {
 	border-color: var(--border-color);
 }
 
-.file-view-content {
+.file-view-content, .shared-file-view-body {
 	background-color: var(--bg);
+	border: none;
 }
 
 .side-nav-footer {
