@@ -196,6 +196,11 @@ table {
 	}
 }
 
+#pwd_strength span {
+	border-color: var(--bg);
+	background-color: var(--bg-active);
+}
+
 #header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header,
 .sf-md-viewer-topbar > * {
 	background-color: black;
@@ -330,6 +335,14 @@ table {
 
 	.dropdown-divider {
 		border-color: var(--border-color);
+	}
+}
+
+.popover {
+	background-color: var(--bg);
+
+	&.right > .arrow::after {
+		border-right-color: black;
 	}
 }
 
