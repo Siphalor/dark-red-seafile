@@ -15,6 +15,10 @@ body {
   color: var(--text-color);
 }
 
+dt, dd {
+  color: var(--text-color);
+}
+
 button:not(.web-setting-icon-btn):not(.btn-icon):not(.action-icon):not(.fas), .btn:not(.web-setting-icon-btn):not(.btn-icon):not(.action-icon):not(.fas) {
   font-family: revert-layer;
 }
@@ -183,6 +187,11 @@ table th {
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
+#pwd_strength span {
+  border-color: var(--bg);
+  background-color: var(--bg-active);
+}
+
 #header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header,
 .sf-md-viewer-topbar > * {
   background-color: black;
@@ -260,6 +269,20 @@ table th {
 .cur-view-path::after {
   border-color: var(--border-color);
 }
+.cur-view-path .sf-heading a {
+  color: var(--primary) !important;
+}
+
+.uploader-list-view, .uploader-list-header, .uploader-list-content {
+  background-color: var(--bg);
+  color: white;
+  border-color: black;
+  box-shadow: none;
+}
+
+.uploader-list-header {
+  border-bottom: 1px solid black;
+}
 
 .web-setting-label {
   text-transform: capitalize;
@@ -304,6 +327,13 @@ table th {
 }
 .dropdown-menu .dropdown-divider {
   border-color: var(--border-color);
+}
+
+.popover {
+  background-color: var(--bg);
+}
+.popover.right > .arrow::after {
+  border-right-color: black;
 }
 
 .sf-popover {
@@ -396,6 +426,9 @@ div[data-evergreen-toaster-container] span > * > * > * {
 .seafile-editor-module .seafile-editor-side-panel .side-panel .side-panel-content {
   padding: 0;
 }
+.seafile-editor-module .seafile-editor-side-panel .side-panel > ul {
+  background-color: black !important;
+}
 .seafile-editor-module .seafile-editor-side-panel .nav {
   background-color: black;
   border-color: var(--border-color) !important;
@@ -405,13 +438,16 @@ div[data-evergreen-toaster-container] span > * > * > * {
   border-left: none;
   margin: 0;
 }
-.seafile-comment .seafile-comment-toggle-resolved, .seafile-comment .seafile-comment-footer {
+.seafile-comment .seafile-comment-toggle-resolved, .seafile-comment .seafile-comment-footer, .seafile-comment .seafile-comment-footer .comment-submit-container {
   background-color: black;
   border-color: var(--border-color) !important;
 }
 .seafile-comment .seafile-comment-toggle-resolved {
   margin-top: 0;
   position: unset;
+}
+.seafile-comment .seafile-comment-toggle-resolved .comment-submit-container::before {
+  border-top-color: var(--bg-active);
 }
 .seafile-comment .seafile-comment-list {
   background-color: var(--bg);
