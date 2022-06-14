@@ -17,9 +17,7 @@ jobs:
         run: |
           mkdir -p css
           sass main.scss css/main.css
-          cat css/main.css
       - name: Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update CSS
-          status_options: "-uall"
