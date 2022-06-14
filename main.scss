@@ -297,6 +297,16 @@ table {
 	}
 }
 
+.uploader-list-view, .uploader-list-header, .uploader-list-content {
+	background-color: var(--bg);
+	color: white;
+	border-color: black;
+	box-shadow: none;
+}
+.uploader-list-header {
+	border-bottom: 1px solid black;
+}
+
 .web-setting-label {
 	text-transform: capitalize;
 }
@@ -444,6 +454,9 @@ div[data-evergreen-toaster-container] span > * > * > * {
 		.side-panel-content {
 			padding: 0;
 		}
+		& > ul {
+			background-color: black !important;
+		}
 	}
 	.nav {
 		background-color: black;
@@ -454,13 +467,17 @@ div[data-evergreen-toaster-container] span > * > * > * {
 	border-left: none;
 	margin: 0;
 
-	.seafile-comment-toggle-resolved, .seafile-comment-footer {
+	.seafile-comment-toggle-resolved, .seafile-comment-footer, .seafile-comment-footer .comment-submit-container {
 		background-color: black;
 		border-color: var(--border-color) !important;
 	}
 	.seafile-comment-toggle-resolved {
 		margin-top: 0;
 		position: unset;
+
+		.comment-submit-container::before {
+			border-top-color: var(--bg-active);
+		}
 	}
 	.seafile-comment-list {
 		background-color: var(--bg);
