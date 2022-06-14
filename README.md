@@ -2,6 +2,12 @@
 
 A dark CSS theme for [Seafile](https://seafile.com) with a customizable primary color --- red by default.
 
+## Preview
+
+![Image of main view](demo/main.png)
+
+[Click here for more more images.](demo)
+
 ## Usage
 
 ### Get the compiled CSS
