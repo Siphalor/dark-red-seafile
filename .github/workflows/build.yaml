@@ -17,6 +17,7 @@ jobs:
         run: |
           mkdir -p css
           sass main.scss css/main.css
+          sass main.scss css/main.min.css -s compressed
       - name: Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
