@@ -1,0 +1,25 @@
+---
+name: Compile with Sass
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: node:latest
+    steps:
+      - name: Setup Sass
+        run: npm install --location=global sass
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build CSS
+        run: |
+          mkdir -p css
+          sass main.scss css/main.css
+          cat css/main.css
+      - name: Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update CSS
+          status_options: "-uall"
