@@ -17,6 +17,10 @@ body {
 	color: var(--text-color);
 }
 
+dt, dd {
+	color: var(--text-color);
+}
+
 button, .btn {
 	&:not(.web-setting-icon-btn):not(.btn-icon):not(.action-icon):not(.fas) {
 		font-family: revert-layer;
@@ -286,6 +290,10 @@ table {
 
 	&::after {
 		border-color: var(--border-color);
+	}
+
+	.sf-heading a {
+		color: var(--primary) !important;
 	}
 }
 
