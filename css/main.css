@@ -36,7 +36,7 @@ button, .btn, .group-operations .group-op-item, .button-container .rich-icon-btn
   border-radius: var(--border-radius);
   border: 1px solid black;
 }
-button:focus, .btn:focus, .group-operations .group-op-item:focus, .button-container .rich-icon-btn:focus, .button-container .btn:focus, .seafile-ed-image .image-full-button:focus, input:focus, .input:focus, .form-control:focus, .detail-btn button:focus {
+button:focus:focus, .btn:focus:focus, .group-operations .group-op-item:focus:focus, .button-container .rich-icon-btn:focus:focus, .button-container .btn:focus:focus, .seafile-ed-image .image-full-button:focus:focus, input:focus:focus, .input:focus:focus, .form-control:focus:focus, .detail-btn button:focus:focus {
   background-color: black;
   color: white;
   border-color: var(--primary);
@@ -46,7 +46,7 @@ input, .input, .form-control {
   line-height: initial;
   padding: 0.2rem 0.4rem 0;
 }
-input:read-only, input:disabled, .input:read-only, .input:disabled, .form-control:read-only, .form-control:disabled {
+input:read-only:read-only, input:disabled:disabled, .input:read-only:read-only, .input:disabled:disabled, .form-control:read-only:read-only, .form-control:disabled:disabled {
   background-color: var(--bg);
   border: 1px solid var(--border-color);
 }
@@ -284,8 +284,17 @@ table th {
   border-bottom: 1px solid black;
 }
 
+.progress-bar {
+  background-color: var(--primary);
+}
+
 .web-setting-label {
   text-transform: capitalize;
+}
+
+.op-bar {
+  background: none;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .op-icon {
