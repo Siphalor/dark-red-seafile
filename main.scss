@@ -39,7 +39,7 @@ input, optgroup {
 	border-radius: var(--border-radius);
 	border: 1px solid black;
 
-	&:focus {
+	&:focus:focus {
 		background-color: black;
 		color: white;
 		border-color: var(--primary);
@@ -50,7 +50,7 @@ input, .input, .form-control {
 	line-height: initial;
 	padding: 0.2rem 0.4rem 0;
 
-	&:read-only, &:disabled {
+	&:read-only:read-only, &:disabled:disabled {
 		background-color: var(--bg);
 		border: 1px solid var(--border-color);
 	}
@@ -306,9 +306,17 @@ table {
 .uploader-list-header {
 	border-bottom: 1px solid black;
 }
+.progress-bar {
+	background-color: var(--primary);
+}
 
 .web-setting-label {
 	text-transform: capitalize;
+}
+
+.op-bar {
+	background: none;
+	border-bottom: 1px solid var(--border-color);
 }
 
 .op-icon {
