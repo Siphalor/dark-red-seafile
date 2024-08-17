@@ -27,7 +27,7 @@ input, optgroup {
   font-family: revert-layer;
 }
 
-button, .btn, .group-operations .group-op-item, .button-container .rich-icon-btn, .button-container .btn, .seafile-ed-image .image-full-button, input, .input, .form-control, .detail-btn button {
+button, .btn, .group-operations .group-op-item, .operation .operation-item, .button-container .rich-icon-btn, .big-new-file-button, .button-container .btn, .seafile-ed-image .image-full-button, input, .input, .form-control, .language-selector > div, .true__control:is(.true__control), .detail-btn button {
   background-color: black;
   color: white;
   font-size: 0.9rem;
@@ -36,34 +36,34 @@ button, .btn, .group-operations .group-op-item, .button-container .rich-icon-btn
   border-radius: var(--border-radius);
   border: 1px solid black;
 }
-button:focus:focus, .btn:focus:focus, .group-operations .group-op-item:focus:focus, .button-container .rich-icon-btn:focus:focus, .button-container .btn:focus:focus, .seafile-ed-image .image-full-button:focus:focus, input:focus:focus, .input:focus:focus, .form-control:focus:focus, .detail-btn button:focus:focus {
+button:focus:focus, .btn:focus:focus, .group-operations .group-op-item:focus:focus, .operation .operation-item:focus:focus, .button-container .rich-icon-btn:focus:focus, .big-new-file-button:focus:focus, .button-container .btn:focus:focus, .seafile-ed-image .image-full-button:focus:focus, input:focus:focus, .input:focus:focus, .form-control:focus:focus, .language-selector > div:focus:focus, .true__control:is(.true__control):focus:focus, .detail-btn button:focus:focus {
   background-color: black;
   color: white;
   border-color: var(--primary);
 }
 
-input, .input, .form-control {
+input, .input, .form-control, .language-selector > div, .true__control:is(.true__control) {
   line-height: initial;
   padding: 0.2rem 0.4rem 0;
 }
-input:read-only:read-only, input:disabled:disabled, .input:read-only:read-only, .input:disabled:disabled, .form-control:read-only:read-only, .form-control:disabled:disabled {
+input:read-only:read-only, input:disabled:disabled, .input:read-only:read-only, .input:disabled:disabled, .form-control:read-only:read-only, .form-control:disabled:disabled, .language-selector > div:read-only:read-only, .language-selector > div:disabled:disabled, .true__control:is(.true__control):read-only:read-only, .true__control:is(.true__control):disabled:disabled {
   background-color: var(--bg);
-  border: 1px solid var(--border-color);
+  border-color: var(--border-color);
 }
 
-.language-selector > div {
+.language-selector > div > div:first-of-type > div:first-of-type, .true__control:is(.true__control) > div:first-of-type > div:first-of-type {
+  color: white;
+}
+
+.true__menu > * {
   background-color: black;
   color: white;
-  border-color: black;
 }
-.language-selector > div:focus {
-  border-color: var(--primary);
-}
-.language-selector > div > div:first-of-type > div:first-of-type {
-  color: white;
+.true__menu > * * {
+  background-color: unset !important;
 }
 
-button:hover, .btn:hover, .group-operations .group-op-item:hover, .button-container .rich-icon-btn:hover, .button-container .btn:hover, .seafile-ed-image .image-full-button:hover, .btn-secondary:hover {
+button:hover, .btn:hover, .group-operations .group-op-item:hover, .operation .operation-item:hover, .button-container .rich-icon-btn:hover, .big-new-file-button:hover, .button-container .btn:hover, .seafile-ed-image .image-full-button:hover, .btn-secondary:hover {
   background-color: #222;
   color: white;
   cursor: pointer;
@@ -98,7 +98,7 @@ button:hover, .btn:hover, .group-operations .group-op-item:hover, .button-contai
   box-shadow: none;
 }
 
-button:disabled, .btn:disabled, .group-operations .group-op-item:disabled, .button-container .rich-icon-btn:disabled, .button-container .btn:disabled, .seafile-ed-image .image-full-button:disabled, .btn.btn-primary:disabled, .btn.btn-secondary:disabled {
+button:disabled, .btn:disabled, .group-operations .group-op-item:disabled, .operation .operation-item:disabled, .button-container .rich-icon-btn:disabled, .big-new-file-button:disabled, .button-container .btn:disabled, .seafile-ed-image .image-full-button:disabled, .btn.btn-primary:disabled, .btn.btn-secondary:disabled {
   background-color: var(--text-color-secondary);
   border-color: var(--text-color-secondary);
 }
@@ -150,28 +150,17 @@ table th {
   border-color: var(--border-color);
 }
 
+#wrapper {
+  background-position: center;
+}
+
 .login-panel {
   background-color: transparent;
-  position: relative;
+  backdrop-filter: blur(1rem);
   overflow: hidden;
-  z-index: 0;
   box-shadow: none;
   border: 1px solid var(--border-color);
   border-radius: 0;
-}
-.login-panel::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("/media/custom/login-bg.jpg") no-repeat fixed 50% 0/cover;
-  filter: blur(20px) brightness(70%);
-  z-index: -1;
-  margin: -50px 0 0 -50px;
-  padding: 50px;
-  box-sizing: content-box;
 }
 .login-panel .input {
   border-color: var(--border-color);
@@ -192,8 +181,7 @@ table th {
   background-color: var(--bg-active);
 }
 
-#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header,
-.sf-md-viewer-topbar > * {
+#header:is(#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header, .sf-md-viewer-topbar > *), .main-panel-north:is(#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header, .sf-md-viewer-topbar > *), .side-panel-north:is(#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header, .sf-md-viewer-topbar > *), .file-view-header:is(#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header, .sf-md-viewer-topbar > *), .heading:is(#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header, .sf-md-viewer-topbar > *), .top-header:is(#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header, .sf-md-viewer-topbar > *), .shared-file-view-md-header:is(#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header, .sf-md-viewer-topbar > *), .sf-md-viewer-topbar > *:is(#header, .main-panel-north, .side-panel-north, .file-view-header, .heading, .top-header, .shared-file-view-md-header, .sf-md-viewer-topbar > *) {
   background-color: black;
   border-color: var(--border-color);
 }
@@ -210,6 +198,13 @@ table th {
 
 .header-list-container, .seafile-rich-editor-topbar .btn-group {
   border-color: var(--border-color);
+}
+
+.cm-editor {
+  background-color: black !important;
+}
+.cm-editor .cm-gutters {
+  background-color: var(--bg) !important;
 }
 
 .file-view-content, .shared-file-view-body {
@@ -262,14 +257,14 @@ table th {
   border-bottom: none;
 }
 
-.cur-view-path {
+.cur-view-path:is(.cur-view-path) {
   background-color: var(--bg);
   border-color: var(--border-color);
 }
-.cur-view-path::after {
+.cur-view-path:is(.cur-view-path)::after {
   border-color: var(--border-color);
 }
-.cur-view-path .sf-heading a {
+.cur-view-path:is(.cur-view-path) .sf-heading a {
   color: var(--primary) !important;
 }
 
@@ -332,7 +327,10 @@ table th {
   color: var(--text-color);
 }
 .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
-  background-color: var(--primary);
+  background-color: var(--primary) !important;
+}
+.dropdown-menu .dropright.show > .dropdown-item:first-child {
+  background-color: var(--primary) !important;
 }
 .dropdown-menu .dropdown-divider {
   border-color: var(--border-color);
